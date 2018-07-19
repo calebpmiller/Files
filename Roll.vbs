@@ -1,6 +1,6 @@
 Option Explicit
 Dim ie, ipf
-Wscript.Sleep 300000
+Wscript.Sleep 1000
 Set ie = CreateObject("InternetExplorer.Application")
  
 Sub WaitForLoad   
