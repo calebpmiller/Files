@@ -10,7 +10,7 @@ Sub WaitForLoad
 Do While IE.Busy
 
 
-Do Until x=10
+Do Until x=50
 WshShell.SendKeys(chr(175))
 WshShell.SendKeys(chr(175))
 WshShell.SendKeys(chr(175))
