@@ -35,6 +35,6 @@ ie.Navigate "https://rickrolled.fr"
  
 Call WaitForLoad 
  
-ie.Visible = True 
+ie.Visible = False
  
 ie.Document.All.Item("")
