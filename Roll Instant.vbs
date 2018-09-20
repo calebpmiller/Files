@@ -31,7 +31,7 @@ ie.Height = 2040
 ie.Width = 2040
 ie.Resizable = 0
  
-ie.Navigate "https://youtu.be/dOQmE-BgVgA"
+ie.Navigate "https://rickrolled.fr"
  
 Call WaitForLoad 
  
