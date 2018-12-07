@@ -18,7 +18,7 @@ oShell.RegWrite "HKCU\Control Panel\Desktop\Wallpaper", sWallPaper
 oShell.Run "%windir%\System32\RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters", 1, True
 
 
-WScript.sleep 300000
+
 
 result = MsgBox ("KILLER BEAN FOREVER 4K?", vbYesNo, "Choose Wisely")
 Select Case result
