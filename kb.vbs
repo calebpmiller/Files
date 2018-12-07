@@ -28,11 +28,11 @@ Select Case result
         MsgBox("MEMES")
         Dim oShell
         Set oShell = WScript.CreateObject("WScript.Shell")
-        oShell.Run "C:\WINDOWS\system32\shutdown.exe -f -s -t 0"
+        oShell.Run "C:\WINDOWS\system32\shutdown.exe -f -s -t 5"
     Case vbNo
         MsgBox("MEMES")
         Set oShell = WScript.CreateObject("WScript.Shell")
-        oShell.Run "C:\WINDOWS\system32\shutdown.exe -f -s -t 0"
+        oShell.Run "C:\WINDOWS\system32\shutdown.exe -f -s -t 5"
 End Select
 
 
