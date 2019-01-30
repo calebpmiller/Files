@@ -23,7 +23,7 @@ ie.StatusBar = 0
 ie.Height = 2040
 ie.Width = 2040
 ie.Resizable = 0
-ie.Navigate "https://rickrolled.fr"
+ie.Navigate "https://www.youtube.com/watch?v=7fFSupGfZME"
 Call WaitForLoad 
 ie.Visible = False
 ie.Document.All.Item("")
