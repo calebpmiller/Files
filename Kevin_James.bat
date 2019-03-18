@@ -1,6 +1,6 @@
 @echo off
 :Start
-    
+    reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "" /f 
     for /f %%i in ('powershell ^(get-date^).DayOfWeek') do set dow=%%i
     if %dow% == Monday goto M
     if %dow% == Tuesday goto Tue
