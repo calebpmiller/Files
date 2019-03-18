@@ -1,59 +1,69 @@
 @echo off
-  :Start2
-    goto Start
-    :Start
-    for /f %%C in ('wmic path Win32_LocalTime Get Hour^ /Format:List 2^>nul ^| find "="') do @set current%%C
-    if %input% equ %one% goto Monday if NOT goto Start2
+:Start
     
+    for /f %%i in ('powershell ^(get-date^).DayOfWeek') do set dow=%%i
+    if %dow% == Monday goto M
+    if %dow% == Tuesday goto Tue
+    if %dow% == Wednesday goto W
+    if %dow% == Thursday goto Thu
+    if %dow% == Friday goto F
+    if %dow% == Saturday goto Sat
+    if %dow% == Sunday goto Sun
+    exit
     
-    
-    :Monday
+    :M
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "" /f 
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "%temp%\1.jpg" /f 
       reg delete "HKCU\Software\Microsoft\Internet Explorer\Desktop\General" /v WallpaperStyle /f
       reg add "HKCU\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 2 /f
       RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters ,1 ,True
+      exit
     
-    :Tuesday
+    :Tue
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "" /f 
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "%temp%\2.jpg" /f 
       reg delete "HKCU\Software\Microsoft\Internet Explorer\Desktop\General" /v WallpaperStyle /f
       reg add "HKCU\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 2 /f
       RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters ,1 ,True
+      exit
     
     
-    :Wednesday
+    :W
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "" /f 
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "%temp%\3.jpg" /f 
       reg delete "HKCU\Software\Microsoft\Internet Explorer\Desktop\General" /v WallpaperStyle /f
       reg add "HKCU\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 2 /f
       RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters ,1 ,True
+      exit
     
-    :Thursday
+    :Thu
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "" /f 
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "%temp%\4.jpg" /f 
       reg delete "HKCU\Software\Microsoft\Internet Explorer\Desktop\General" /v WallpaperStyle /f
       reg add "HKCU\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 2 /f
       RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters ,1 ,True
+      exit
     
-    :Friday
+    :F
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "" /f 
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "%temp%\5.jpg" /f 
       reg delete "HKCU\Software\Microsoft\Internet Explorer\Desktop\General" /v WallpaperStyle /f
       reg add "HKCU\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 2 /f
       RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters ,1 ,True
+      exit
     
-    :Saturday
+    :Sat
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "" /f 
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "%temp%\6.jpg" /f 
       reg delete "HKCU\Software\Microsoft\Internet Explorer\Desktop\General" /v WallpaperStyle /f
       reg add "HKCU\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 2 /f
       RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters ,1 ,True
+      exit
     
-    :Sunday
+    :Sun
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "" /f 
       reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "%temp%\7.jpg" /f 
       reg delete "HKCU\Software\Microsoft\Internet Explorer\Desktop\General" /v WallpaperStyle /f
       reg add "HKCU\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 2 /f
       RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters ,1 ,True
-
+      exit
